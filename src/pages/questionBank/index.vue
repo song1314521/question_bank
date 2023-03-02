@@ -154,7 +154,7 @@
 </template>
 
 <script lang="ts" setup>
-import { getQuestList } from "@/api/quest";
+import { getQuestList } from "@/api/question";
 import { ref, reactive, onMounted } from "vue";
 // 弹框
 const dialogVisible = ref(false);
