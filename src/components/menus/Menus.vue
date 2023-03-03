@@ -11,7 +11,7 @@
     background-color="#304156"
     text-color="#bfcbd9"
     active-text-color="#409eef"
-    default-active="1"
+    :default-active="navMenu.replace('/', '')"
     router
     unique-opened
     class="el-menu-vertical-demo"
@@ -49,9 +49,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
-
-
+import { storeToRefs } from "pinia";
+import { mainStore } from "@/store/store";
+const store = mainStore();
+const { navMenu } = storeToRefs(store);
 </script>
 
 <style lang="scss" scoped>

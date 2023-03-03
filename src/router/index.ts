@@ -62,6 +62,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const store = mainStore();
   store.setBreadCrumbs(to.meta.title as string[]);
+  store.setNavMenu(to.path);
   next();
 });
 
