@@ -30,7 +30,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://admin.free.svipss.top",
+        target: "http://localhost:3000",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },

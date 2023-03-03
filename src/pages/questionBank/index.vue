@@ -94,6 +94,11 @@
       >
       </el-table-column>
       <el-table-column
+        prop="difficulty"
+        label="难度"
+      >
+      </el-table-column>
+      <el-table-column
         prop="createTime"
         label="创建时间"
       >

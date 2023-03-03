@@ -52,12 +52,6 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import {
-  HomeFilled,
-  MessageBox,
-  Menu as IconMenu,
-  User,
-} from "@element-plus/icons-vue";
 
 const isCollapse = ref(false);
 const handleOpen = (key: string, keyPath: string[]) => {
