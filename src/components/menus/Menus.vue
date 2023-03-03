@@ -15,9 +15,7 @@
     router
     unique-opened
     class="el-menu-vertical-demo"
-    :collapse="isCollapse"
-    @open="handleOpen"
-    @close="handleClose"
+    :collapse="false"
   >
     <el-menu-item index="index">
       <el-icon><HomeFilled /></el-icon>
@@ -53,13 +51,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 
-const isCollapse = ref(false);
-const handleOpen = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath);
-};
-const handleClose = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath);
-};
+
 </script>
 
 <style lang="scss" scoped>

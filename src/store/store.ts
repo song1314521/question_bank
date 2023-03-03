@@ -1,18 +1,20 @@
 import { defineStore } from "pinia";
+
+interface MainState {
+  breadCrumbs: string[];
+}
 export const mainStore = defineStore("main", {
-  state: () => {
-    return {
-      hello: "hello1234",
-    };
-  },
+  state: (): MainState => ({ breadCrumbs: [] }),
+
   getters: {
-    getHello(): string {
-      return this.hello;
+    getBreadCrumbs(): string[] {
+      return this.breadCrumbs;
     },
   },
+
   actions: {
-    setHello(hello: string) {
-      this.hello = hello;
+    setBreadCrumbs(breadCrumbs: string[]) {
+      this.breadCrumbs = breadCrumbs;
     },
   },
 });
